@@ -1,7 +1,4 @@
-var i = 0;
-while (i < 10) {
-  setTimeout(function () {
-    console.log(i);
-  }, 1000);
-  i++;
-}
+console.log(parseFloat("10.9"));
+console.log(parseFloat("10"));
+
+console.log(NaN === NaN);

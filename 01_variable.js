@@ -55,3 +55,33 @@ console.log(arr); // [1, 2, 3, 4]
 let x = 10; // number
 x = "Hello"; // now it's a string
 x = [1, 2, 3]; // now it's an array
+
+//* Variable Naming Rules
+
+// There are a few rules that you need to follow when naming variables in JavaScript:
+
+// Variable names can only contain letters, digits, underscores, and dollar signs.
+// Variable names cannot start with a digit.
+// Variable names are case-sensitive.
+
+// It is also a good practice to use descriptive and meaningful names for your variables, as this makes your code easier to read and understand.
+
+//* Using Variables
+
+// You can use variables in your code to store and manipulate data. For example, you can use variables in mathematical operations, string concatenation, and more.
+
+var z = 10;
+console.log(z); // prints 10
+
+z = "hello";
+console.log(z); // prints "hello"
+
+// You can also perform various operations on variables, such as mathematical calculations, string concatenation, and more. For example:
+
+var a = 10;
+var b = 20;
+var c = a + b; // c is 30
+
+var str1 = "hello";
+var str2 = "world";
+var str3 = str1 + " " + str2; // str3 is "hello world"
