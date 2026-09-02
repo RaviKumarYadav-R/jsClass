@@ -17,7 +17,6 @@ let sum = 10 + 5;
 
 console.log(sum); // 15
 
-
 //* Types of Operators in JavaScript
 
 // JavaScript provides different types of operators:
@@ -30,7 +29,6 @@ console.log(sum); // 15
 // 6. Ternary Operator
 // 7. Nullish Coalescing Operator
 // 8. Optional Chaining Operator
-
 
 //* Arithmetic Operators
 
@@ -46,7 +44,6 @@ console.log(a / b); // 3.333... → Division
 console.log(a % b); // 1  → Remainder
 console.log(a ** b); // 1000 → Exponentiation
 
-
 //* Modulus (%) Operator
 
 // The % operator returns the REMAINDER after division.
@@ -60,7 +57,6 @@ console.log(7 % 2); // 1
 console.log(10 % 2); // 0 → Even
 console.log(7 % 2); // 1 → Odd
 
-
 //* Exponentiation (**) Operator
 
 // The ** operator raises a number to a power.
@@ -70,7 +66,6 @@ console.log(5 ** 2); // 25
 
 // 2 ** 3 means:
 // 2 × 2 × 2 = 8
-
 
 //* Comparison Operators
 
@@ -94,7 +89,6 @@ console.log(x < y); // false
 console.log(x >= y); // true
 console.log(x <= y); // false
 
-
 //* == Loose Equality
 
 // == compares values after allowing type coercion.
@@ -102,7 +96,6 @@ console.log(x <= y); // false
 console.log(5 == "5"); // true
 
 // JavaScript converts "5" into 5 before comparison.
-
 
 //* === Strict Equality
 
@@ -116,14 +109,12 @@ console.log(5 === 5); // true
 // Best practice:
 // Prefer === instead of ==.
 
-
 //* != Loose Inequality
 
 // != checks whether two values are different after type coercion.
 
 console.log(5 != "6"); // true
 console.log(5 != "5"); // false
-
 
 //* !== Strict Inequality
 
@@ -135,18 +126,15 @@ console.log(5 !== 5); // false
 // Best practice:
 // Prefer !== instead of !=.
 
-
 //* Greater Than (>)
 
 console.log(10 > 5); // true
 console.log(5 > 10); // false
 
-
 //* Less Than (<)
 
 console.log(5 < 10); // true
 console.log(10 < 5); // false
-
 
 //* Greater Than Or Equal To (>=)
 
@@ -154,13 +142,11 @@ console.log(10 >= 10); // true
 console.log(10 >= 5); // true
 console.log(5 >= 10); // false
 
-
 //* Less Than Or Equal To (<=)
 
 console.log(10 <= 10); // true
 console.log(5 <= 10); // true
 console.log(15 <= 10); // false
-
 
 //* Logical Operators
 
@@ -172,7 +158,6 @@ console.log(15 <= 10); // false
 // || → OR
 // !  → NOT
 
-
 //* Logical AND (&&)
 
 // AND returns true only when BOTH conditions are true.
@@ -182,14 +167,13 @@ console.log(true && false); // false
 console.log(false && true); // false
 console.log(false && false); // false
 
-
 // Example:
 
 let age = 20;
 let hasLicense = true;
 
 if (age >= 18 && hasLicense) {
-    console.log("You can drive!");
+  console.log("You can drive!");
 }
 
 // Both conditions must be true:
@@ -198,7 +182,6 @@ if (age >= 18 && hasLicense) {
 // hasLicense     → true
 //
 // true && true → true
-
 
 //* Logical OR (||)
 
@@ -209,18 +192,16 @@ console.log(false || true); // true
 console.log(true || true); // true
 console.log(false || false); // false
 
-
 // Example:
 
 let hasCash = false;
 let hasCard = true;
 
 if (hasCash || hasCard) {
-    console.log("You can pay!");
+  console.log("You can pay!");
 }
 
 // At least one condition is true.
-
 
 //* Logical NOT (!)
 
@@ -229,15 +210,12 @@ if (hasCash || hasCard) {
 console.log(!true); // false
 console.log(!false); // true
 
-
 let isLoggedIn = true;
 
 console.log(!isLoggedIn); // false
 
-
 // true → false
 // false → true
-
 
 //* Assignment Operators
 
@@ -250,7 +228,6 @@ let num = 10;
 num = 20;
 
 console.log(num); // 20
-
 
 //* Addition Assignment (+=)
 
@@ -265,7 +242,6 @@ score += 5;
 
 console.log(score); // 15
 
-
 //* Subtraction Assignment (-=)
 
 score -= 5;
@@ -274,7 +250,6 @@ score -= 5;
 // score = score - 5
 
 console.log(score); // 10
-
 
 //* Multiplication Assignment (*=)
 
@@ -285,7 +260,6 @@ score *= 2;
 
 console.log(score); // 20
 
-
 //* Division Assignment (/=)
 
 score /= 2;
@@ -295,7 +269,6 @@ score /= 2;
 
 console.log(score); // 10
 
-
 //* Remainder Assignment (%=)
 
 score %= 3;
@@ -304,7 +277,6 @@ score %= 3;
 // score = score % 3
 
 console.log(score); // 1
-
 
 //* Exponentiation Assignment (**=)
 
@@ -316,7 +288,6 @@ power **= 3;
 // power = power ** 3
 
 console.log(power); // 8
-
 
 //* Increment Operator (++)
 
@@ -331,7 +302,6 @@ console.log(count); // 6
 // Same as:
 // count = count + 1
 
-
 //* Decrement Operator (--)
 
 // -- decreases a number by 1.
@@ -342,7 +312,6 @@ console.log(count); // 5
 
 // Same as:
 // count = count - 1
-
 
 //* Prefix vs Postfix
 
@@ -356,7 +325,6 @@ let n = 5;
 console.log(n++); // 5
 console.log(n); // 6
 
-
 // Prefix:
 // value is changed first, then used.
 
@@ -364,7 +332,6 @@ let m = 5;
 
 console.log(++m); // 6
 console.log(m); // 6
-
 
 //* Ternary Operator
 
@@ -376,23 +343,19 @@ console.log(m); // 6
 
 let userAge = 20;
 
-let message = userAge >= 18
-    ? "You are an adult"
-    : "You are a minor";
+let message = userAge >= 18 ? "You are an adult" : "You are a minor";
 
 console.log(message); // "You are an adult"
-
 
 // Same logic using if-else:
 
 let message2;
 
 if (userAge >= 18) {
-    message2 = "You are an adult";
+  message2 = "You are an adult";
 } else {
-    message2 = "You are a minor";
+  message2 = "You are a minor";
 }
-
 
 //* Nullish Coalescing Operator (??)
 
@@ -404,13 +367,11 @@ let displayName = username ?? "Guest";
 
 console.log(displayName); // "Guest"
 
-
 let name = "Ravi";
 
 displayName = name ?? "Guest";
 
 console.log(displayName); // "Ravi"
-
 
 // Important:
 //
@@ -423,7 +384,6 @@ console.log(displayName); // "Ravi"
 console.log(0 ?? 100); // 0
 console.log(false ?? true); // false
 console.log("" ?? "Guest"); // ""
-
 
 //* Optional Chaining Operator (?.)
 
@@ -441,13 +401,11 @@ console.log(user.profile); // undefined
 //
 // would cause an error because profile is undefined.
 
-
 // With optional chaining:
 
 console.log(user.profile?.name); // undefined
 
 // JavaScript safely stops instead of throwing an error.
-
 
 //* What Are Expressions?
 
@@ -455,16 +413,15 @@ console.log(user.profile?.name); // undefined
 
 // Examples:
 
-10 + 5
+10 + 5;
 
-x > y
+x > y;
 
-"Hello" + "World"
+"Hello" + "World";
 
-true && false
+true && false;
 
 // All of these produce a result.
-
 
 let first = 10;
 let second = 20;
@@ -476,7 +433,6 @@ let result = first + second;
 
 console.log(result); // 30
 
-
 //* Expression vs Statement
 
 // An expression PRODUCES A VALUE.
@@ -485,22 +441,20 @@ console.log(result); // 30
 
 x > 5;
 
-"Hello";
-
+("Hello");
 
 // A statement performs an ACTION.
 
 let age2 = 21;
 
 if (age2 >= 18) {
-    console.log("Adult");
+  console.log("Adult");
 }
 
 // Easy way to remember:
 //
 // Expression → Produces a value
 // Statement  → Performs an action
-
 
 //* Operator Precedence
 
@@ -516,7 +470,6 @@ console.log(result1); // 25
 // 5 * 3 → 15
 // 10 + 15 → 25
 
-
 //* Parentheses
 
 // Parentheses can be used to control the order of operations.
@@ -530,7 +483,6 @@ console.log(result2); // 45
 //
 // Then:
 // 15 * 3 → 45
-
 
 //* Easy Operator Precedence Rule
 
@@ -547,7 +499,6 @@ console.log(result2); // 45
 // 9. ?? → Nullish coalescing
 // 10. ?: → Ternary
 
-
 //* Final Memory Trick
 
 // Arithmetic:
@@ -558,7 +509,6 @@ console.log(result2); // 45
 // /  → Divide
 // %  → Remainder
 // ** → Power
-
 
 // Comparison:
 //
@@ -571,13 +521,11 @@ console.log(result2); // 45
 // >=  → Greater than or equal
 // <=  → Less than or equal
 
-
 // Logical:
 //
 // && → AND → Everything must be true
 // || → OR  → At least one must be true
 // !  → NOT → Reverse the result
-
 
 // Assignment:
 //
@@ -588,7 +536,6 @@ console.log(result2); // 45
 // /=  → Divide and assign
 // %=  → Remainder and assign
 
-
 // Special:
 //
 // ++ → Increase by 1
@@ -596,7 +543,6 @@ console.log(result2); // 45
 // ?: → Short if-else
 // ?? → Fallback for null/undefined
 // ?. → Safely access properties
-
 
 //* The Most Important Things To Remember
 

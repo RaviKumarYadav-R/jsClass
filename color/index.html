@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="background-animation"></div>
+    <div class="parent">
+        <header class="header">
+            <div class="header-content">
+                <h1>🎨 Color Palette Generator</h1>
+                <p class="subtitle">Explore and create beautiful colors using HSL</p>
+            </div>
+        </header>
+        <div class="hsl-color-container">
+            <div class="slider-section">
+                <div class="controls-card">
+                    <h2 class="controls-title">Color Controls</h2>
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <label for="hue-slider">🎯 Hue</label>
+                            <span class="slider-value" id="hue-value">220</span>°
+                        </div>
+                        <input type="range" class="slider" id="hue-slider" min="0" max="360" value="220">
+                        <div class="slider-track-bg hue-track"></div>
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <label for="saturation-slider">✨ Saturation</label>
+                            <span class="slider-value" id="saturation-value">80</span>%
+                        </div>
+                        <input type="range" class="slider" id="saturation-slider" min="0" max="100" value="80">
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <label for="lightness-slider">💡 Lightness</label>
+                            <span class="slider-value" id="lightness-value">50</span>%
+                        </div>
+                        <input type="range" class="slider" id="lightness-slider" min="0" max="100" value="50">
+                    </div>
+
+                    <div class="color-values-container">
+                        <div class="value-box">
+                            <span class="value-label">RGB</span>
+                            <span class="value-text" id="rgb-value">rgb(0, 0, 0)</span>
+                        </div>
+                        <div class="value-box">
+                            <span class="value-label">HEX</span>
+                            <span class="value-text" id="hex-value">#000000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-section-wrapper">
+                <article class="preview-section">
+                    <div class="color-display-large"></div>
+                </article>
+                <article class="info-card">
+                    <h2>📚 HSL Color System</h2>
+                    <p>
+                        HSL stands for Hue, Saturation, and Lightness. It is a color model
+                        that makes it easier to understand and adjust colors.
+                    </p>
+                    <ul>
+                        <li><strong>Hue:</strong> Defines the color using values from 0° to 360°.</li>
+                        <li><strong>Saturation:</strong> Controls the intensity of the color from 0% to 100%.</li>
+                        <li><strong>Lightness:</strong> Controls how light or dark the color appears.</li>
+                        <li><strong>Syntax:</strong> <code>hsl(hue, saturation%, lightness%)</code></li>
+                        <li><strong>Example:</strong> <code>hsl(220, 80%, 50%)</code> creates a vivid blue.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

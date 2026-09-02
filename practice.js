@@ -1,4 +1,12 @@
-console.log(parseFloat("10.9"));
-console.log(parseFloat("10"));
+const number = Math.floor(Math.random() * 100) + 1;
 
-console.log(NaN === NaN);
+document.querySelector(".guess-btn").addEventListener("click", () => {
+  const inputVal = document.querySelector("#guess-input").value;
+  if (number > inputVal) {
+    alert("Too low");
+  } else if (number < inputVal) {
+    alert("Too High");
+  } else {
+    alert("Congratulation You guess the number");
+  }
+});
