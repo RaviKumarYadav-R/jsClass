@@ -1,12 +1,9 @@
-const number = Math.floor(Math.random() * 100) + 1;
+let userInput = prompt("you want to close tab");
 
-document.querySelector(".guess-btn").addEventListener("click", () => {
-  const inputVal = document.querySelector("#guess-input").value;
-  if (number > inputVal) {
-    alert("Too low");
-  } else if (number < inputVal) {
-    alert("Too High");
-  } else {
-    alert("Congratulation You guess the number");
-  }
-});
+while (userInput !== "yes" && userInput !== "no") {
+  userInput = prompt("you want to close tab");
+}
+
+if (userInput === "yes") {
+  window.close();
+}
