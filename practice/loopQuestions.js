@@ -170,3 +170,51 @@ function classifyNumbers(numbers) {
 }
 
 // console.log(classifyNumbers([1, -2, 0, 3, -4, 0]));
+
+//==== Q11 ====
+
+function resultCounter(marks) {
+  let pass = 0;
+  let fail = 0;
+
+  for (let i = 0; i < marks.length; i++) {
+    if (marks[i] >= 40) {
+      pass++;
+    } else {
+      fail++;
+    }
+  }
+
+  return {
+    pass,
+    fail,
+  };
+}
+
+// console.log(resultCounter([10, 20, 30, 40, 50])); // should return { pass: 5, fail: 0 }
+
+//==== Q12 ====
+function ageCategories(ages) {
+  const categories = {
+    child: 0,
+    teenager: 0,
+    adult: 0,
+    senior: 0,
+  };
+
+  for (let i = 0; i < ages.length; i++) {
+    if (ages[i] >= 0 && ages[i] <= 12) {
+      categories.child++;
+    } else if (ages[i] >= 13 && ages[i] <= 19) {
+      categories.teenager++;
+    } else if (ages[i] >= 20 && ages[i] <= 59) {
+      categories.adult++;
+    } else {
+      categories.senior++;
+    }
+  }
+
+  return categories;
+}
+
+// console.log(ageCategories([5, 15, 25, 65])); // should return { child: 1, teenager: 1, adult: 1, senior: 1 }

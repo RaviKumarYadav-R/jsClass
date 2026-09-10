@@ -522,6 +522,8 @@ function testScope() {
   console.log(message);
 }
 
+console.log(message);
+
 testScope();
 
 // This would cause an error:
@@ -596,6 +598,9 @@ function createGreeting() {
 }
 
 const greeting = createGreeting();
+//const greeting = function(){
+// console.log("Hello!")
+//}
 
 greeting();
 
@@ -618,6 +623,7 @@ greeting();
 // ...parameter
 
 function addAll(...numbers) {
+  //[]
   let total = 0;
 
   for (const number of numbers) {
