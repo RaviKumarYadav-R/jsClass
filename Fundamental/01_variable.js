@@ -1,87 +1,80 @@
-//* What Are Variables?
-// Variables are containers for storing data values.
-// You can think of a variable like a container or a box that holds information. You can put something inside it, take it out, or even replace it with something new later.
+//* ============================================================
+//* JAVASCRIPT FUNDAMENTALS — VARIABLES
+//* ============================================================
 
-// Example
+//* WHAT IS A VARIABLE?
+//* A variable is a named binding used to store/reference a value.
 
-var name = "John"; // Here, we are creating a variable named 'name' and assigning it the value "John".
-var age = 30; // Here, we are creating a variable named 'age' and assigning it the value 30.
+//* `let`  → mutable binding
+//* `const` → binding cannot be reassigned
+//* `var` → legacy function-scoped declaration
 
-// Variables allow you to store, retrieve, and manipulate data in your program — which is what makes them one of the most important concepts in any programming language.
+let age = 21;
+age = 22;
+console.log(age);
 
-//* Declaring Variables
+const name = "Ravi";
+console.log(name);
 
-// There are three ways to declare a variable in JavaScript: using var, let, or const.
+//* const must be initialized:
+//* const GRAVITY; // SyntaxError
 
-//* Using var
-// var keyword is the oldest way to declare a variable in JavaScript.
+//* IMPORTANT: const does NOT make objects/arrays immutable.
+const user = { name: "Ravi" };
+user.name = "Aman"; // allowed
 
-var city = "New York"; // Declaring a variable named 'city' and assigning it the value "New York".
+//* Primitive values are immutable; bindings can point to new values.
+let city = "Dhanbad";
+city = "Ranchi";
 
-// This creates a variable named 'city' and assigns the value "New York" to it. If you want, you can also declare it first and assign a value later:
+//* NAMING RULES
+//* - letters, digits, `_`, `$`
+//* - cannot start with a digit
+//* - case-sensitive
+//* - cannot use reserved keywords
+//* - prefer camelCase
 
-var country; // Declaring a variable named 'country' without assigning a value.
-country = "USA"; // Now we are assigning the value "USA" to the variable 'country'.
+const firstName = "Ravi";
+const totalMarks = 95;
 
-// However, var has some scoping issues — it doesn’t follow block-level scope (we’ll discuss this later). That’s why modern JavaScript mostly uses let and const.
+//* SCOPE
+//* var    → function scope
+//* let/const → block scope
 
-//* Using let
-// let keyword was introduced in ES6 (ECMAScript 2015) and is now the preferred way to declare variables that can change their value.
-let name = "Alice"; // Declaring a variable named 'name' and assigning it the value "Alice".
-name = "Bob"; // Changing the value of the variable 'name' to "Bob".
+function example() {
+  if (true) {
+    let blockValue = 10;
+    var functionValue = 20;
+    console.log(blockValue, functionValue);
+  }
 
-// You can reassign a let variable, but you cannot redeclare it in the same scope.
+  console.log(functionValue);
+  // console.log(blockValue); // ReferenceError
+}
 
-let name = "Charlie"; // This will throw an error because 'name' has already been declared in the same scope.
+example();
 
-//* Using const
-// const keyword is also introduced in ES6 and is used to declare variables that cannot be reassigned after their initial assignment.
-const PI = 3.14; // Declaring a constant named 'PI' and assigning it the value 3.14.
-// PI = 3.14159; // This will throw an error because you cannot reassign a const variable.
+//* HOISTING / TDZ
+//* `var` declaration is hoisted and initialized with undefined.
+//* `let` and `const` are hoisted conceptually but remain in the
+//* Temporal Dead Zone until their declaration is evaluated.
 
-// You must assign a value to a const variable at the time of declaration — leaving it empty will also cause an error:
+console.log(varValue); // undefined
+var varValue = 10;
 
-// const GRAVITY; // This will not throw an error because const variables must be initialized at the time of declaration.
+// console.log(letValue); // ReferenceError
+let letValue = 20;
 
-// However, if the constant holds an object or array, the contents of that object can still change (only the reference is constant):
+//* REASSIGNMENT
+let score = 10;
+score = 20;
+score += 5;
+console.log(score);
 
-const arr = [1, 2, 3];
-arr.push(4); // Works fine
-console.log(arr); // [1, 2, 3, 4]
+//* CONST REASSIGNMENT IS NOT ALLOWED
+const country = "India";
+// country = "Nepal"; // TypeError
 
-//* JavaScript Is Dynamically Typed
-// JavaScript is a dynamically typed language, which means you don’t have to specify the data type of a variable when you declare it. The type is determined automatically based on the value assigned to the variable.
-
-let x = 10; // number
-x = "Hello"; // now it's a string
-x = [1, 2, 3]; // now it's an array
-
-//* Variable Naming Rules
-
-// There are a few rules that you need to follow when naming variables in JavaScript:
-
-// Variable names can only contain letters, digits, underscores, and dollar signs.
-// Variable names cannot start with a digit.
-// Variable names are case-sensitive.
-
-// It is also a good practice to use descriptive and meaningful names for your variables, as this makes your code easier to read and understand.
-
-//* Using Variables
-
-// You can use variables in your code to store and manipulate data. For example, you can use variables in mathematical operations, string concatenation, and more.
-
-var z = 10;
-console.log(z); // prints 10
-
-z = "hello";
-console.log(z); // prints "hello"
-
-// You can also perform various operations on variables, such as mathematical calculations, string concatenation, and more. For example:
-
-var a = 10;
-var b = 20;
-var c = a + b; // c is 30
-
-var str1 = "hello";
-var str2 = "world";
-var str3 = str1 + " " + str2; // str3 is "hello world"
+//* GOLDEN RULE
+//* Use `const` by default. Use `let` when the binding must change.
+//* Avoid `var` in modern JavaScript unless learning legacy code.
