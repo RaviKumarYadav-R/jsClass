@@ -1,33 +1,77 @@
-// Inheritance
-// Inheritance is a fundamental concept in object-oriented programming (OOP) that allows developers to create a new class that inherits properties and methods from an existing class. In JavaScript, inheritance is achieved by using the prototype property and the Object.create() method.
+//* ============================================================
+//* JAVASCRIPT OOP — INHERITANCE
+//* ============================================================
 
-// JavaScript uses a prototype-based inheritance model, which means that objects can inherit properties and methods from other objects. Each object has a prototype property that refers to another object, and properties and methods are inherited by traversing the prototype chain.
+//* Inheritance lets one class/object reuse behavior from another.
+//* JavaScript implements inheritance through prototype chains.
 
-// For example, consider the following code:
+//* 1. MODERN CLASS INHERITANCE
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  greet() {
+    return `Hello, I am ${this.name}`;
+  }
 }
 
-Person.prototype.greet = function () {
-  return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+class Student extends Person {
+  constructor(name, course) {
+    super(name);
+    this.course = course;
+  }
+
+  study() {
+    return `${this.name} studies ${this.course}`;
+  }
+
+  greet() {
+    return `${super.greet()} and I am a student`;
+  }
+}
+
+const student = new Student("Ravi", "JavaScript");
+console.log(student.greet());
+console.log(student.study());
+console.log(student instanceof Student);
+console.log(student instanceof Person);
+
+//* `extends` establishes prototype inheritance.
+//* `super()` calls the parent constructor before using `this`.
+//* `super.method()` calls a parent method implementation.
+
+//* 2. UNDER THE HOOD
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.speak = function () {
+  return `${this.name} makes a sound`;
 };
 
-function Student(name, age, major) {
-  Person.call(this, name, age);
-  this.major = major;
+function Dog(name, breed) {
+  Animal.call(this, name);
+  this.breed = breed;
 }
 
-Student.prototype = Object.create(Person.prototype);
-Student.prototype.constructor = Student;
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
 
-let student = new Student("John", 25, "Computer Science");
-console.log(student.greet()); // "Hello, my name is John and I am 25 years old."
-console.log(student.major); // "Computer Science"
+const dog = new Dog("Bruno", "Labrador");
+console.log(dog.speak());
 
-// In this example, the Student class inherits properties and methods from the Person class. The Object.create() method is used to create a new object that inherits from the Person.prototype object, and the constructor property is reset to the Student class.
+//* Object.create(Animal.prototype) does not copy methods.
+//* It links Dog.prototype to Animal.prototype.
 
-// In JavaScript, the inheritance model is a bit different from other languages like Java or C#, where classes inherit from other classes and the subclass has access to the methods and properties of the superclass. In JavaScript, it's based on the prototype chain, where each object has a prototype property that refers to another object and it inherits properties and methods by traversing the prototype chain.
+//* Lookup flow:
+//* dog -> Dog.prototype -> Animal.prototype -> Object.prototype -> null
 
-// In conclusion, inheritance is a fundamental concept in OOP that allows developers to create a new class that inherits properties and methods from an existing class. In JavaScript, inheritance is achieved by using the prototype property and the Object.create() method. This allows developers to create reusable code and create a more organized and maintainable codebase. Understanding the prototype-based inheritance model in JavaScript is essential to be able to use inheritance effectively in JavaScript.
+//* IMPORTANT RULES
+//* - Prefer modern class syntax for application-level OOP.
+//* - Learn prototypes because classes use the prototype system underneath.
+//* - Inheritance represents an "is-a" relationship.
+//* - Do not force inheritance when composition is better.
+
+//* Golden Rule:
+//* `extends` is syntax; the prototype chain is the mechanism.
