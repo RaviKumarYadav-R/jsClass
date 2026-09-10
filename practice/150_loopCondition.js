@@ -1082,11 +1082,25 @@ function q95ReverseNumberPattern(rows) {
 // Q96. Square star pattern
 function q96SquarePattern(rows) {
   // TODO
+  for (let i = 1; i <= rows; i++) {
+    let pattern = "";
+    for (let j = 1; j <= rows; j++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
 }
 
 // Q97. Number square
 function q97NumberSquare(rows) {
   // TODO
+  for (let i = 1; i <= rows; i++) {
+    let pattern = "";
+    for (let j = 1; j <= rows; j++) {
+      pattern += i;
+    }
+    console.log(pattern);
+  }
 }
 
 // Q98. Multiplication grid
