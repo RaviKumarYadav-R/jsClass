@@ -1,67 +1,98 @@
-# JavaScript Mastery — Learn, Practice & Teach
+# JavaScript Mastery — Learn, Practice, Teach & Build
 
-A complete JavaScript curriculum designed for **absolute beginner → advanced developer → teacher**.
+A complete JavaScript learning and teaching repository for **absolute beginner → advanced developer → teacher**.
 
-## Teaching rule
-Every chapter follows this order:
-1. Definition
-2. Why it exists
-3. Syntax
-4. Small examples
-5. Execution flow / mental model
-6. Important rules
-7. Common mistakes
-8. Practical use cases
-9. Practice questions
-10. Mini project / teaching challenge
+## Core learning loop
+
+**DEFINE → EXPLAIN → VISUALIZE → EXECUTE → COMPARE → PRACTICE → DEBUG → TEACH → BUILD → RECALL**
+
+A topic is not complete because you watched a tutorial. It is complete when you can define it, predict it, implement it, debug it, explain why it behaves that way, and use it in a real project.
+
+## Chapter standard
+
+Every major chapter should contain:
+
+1. Precise definition
+2. Simple explanation
+3. Why the concept exists
+4. Problem it solves
+5. Mental model / diagram
+6. Syntax and rules
+7. Basic examples
+8. Step-by-step execution
+9. Internal JavaScript behavior
+10. Variations and edge cases
+11. Wrong vs correct code
+12. Common mistakes
+13. Debugging techniques
+14. Related concepts
+15. Real-world use cases
+16. Practice ladder
+17. Teach-back questions
+18. Interview questions
+19. Mini challenge
+20. Revision checklist
 
 ## Curriculum
 
-| # | Module | Goal |
-|---|---|---|
-| 01 | Getting Started | Runtime, tooling, JavaScript basics |
-| 02 | Fundamentals | Variables, types, operators, conditions, loops |
-| 03 | Functions | Parameters, returns, callbacks, higher-order functions |
-| 04 | Scope & Execution | Scope, hoisting, TDZ, closures, `this`, bind/call/apply |
-| 05 | Strings | String model and all important methods |
-| 06 | Arrays | Array fundamentals, iteration and methods |
-| 07 | Objects | Object model, properties, methods, descriptors |
-| 08 | Collections | Map, Set, WeakMap, WeakSet, iterables |
-| 09 | Built-in Objects | Date, Math, Number, Boolean, JSON, Intl, RegExp |
-| 10 | Advanced JavaScript | Prototype, prototype chain, symbols, generators, Proxy, Reflect |
-| 11 | Asynchronous JavaScript | Callbacks, promises, async/await, event loop, concurrency |
-| 12 | Modules | ESM, CommonJS concepts, imports/exports, module design |
-| 13 | OOP | Classes, constructors, static members, encapsulation, inheritance, polymorphism, abstraction, composition |
-| 14 | DOM | DOM tree, selection, manipulation, events, forms, observers |
-| 15 | BOM | Window, History, Navigator, Screen, Location |
-| 16 | Browser APIs | Storage, timers, URL, clipboard, notifications, workers, AbortController |
-| 17 | Networking | HTTP, Fetch, REST, headers, status codes, JSON, CORS |
-| 18 | Error Handling | Error types, throw, try/catch/finally, debugging, custom errors |
-| 19 | Memory & Performance | References, garbage collection concepts, rendering and optimization |
-| 20 | DSA | Complexity, arrays, strings, linked lists, stacks, queues, trees, graphs, algorithms |
-| 21 | Functional Programming | Pure functions, immutability, composition, map/filter/reduce |
-| 22 | Testing | Assertions, unit tests, integration tests, test design |
-| 23 | TypeScript | Types, interfaces, generics, narrowing, utility types |
-| 24 | Design Patterns | Factory, Builder, Strategy, Observer, Adapter, Decorator, Module |
-| 25 | SOLID | Five principles with JavaScript examples |
-| 26 | Architecture | Layering, separation of concerns, dependency injection, maintainability |
-| 27 | Practice | Topic-wise exercises from beginner to interview level |
-| 28 | Projects | Guided projects that combine previous modules |
+01 Getting Started → JavaScript, ECMAScript, engines, runtimes, execution, tooling
+02 Fundamentals → values, variables, types, operators, conditions, loops
+03 Functions → declarations, expressions, parameters, callbacks, HOFs, recursion, closures
+04 Scope & Execution → lexical scope, hoisting, TDZ, execution contexts, call stack, `this`
+05 Strings → string model, Unicode, searching, extraction, formatting, regex
+06 Arrays → mutation, copying, iteration, transformation, sorting, flattening
+07 Objects → properties, references, copying, destructuring, descriptors, prototypes
+08 Collections → Map, Set, WeakMap, WeakSet, iterables and iterators
+09 Built-in Objects → Date, Math, Number, JSON, RegExp, Intl, Symbol, BigInt
+10 Advanced JavaScript → prototypes, generators, Proxy, Reflect, typed arrays, buffers
+11 Async JavaScript → callbacks, promises, async/await, event loop, microtasks, concurrency
+12 Modules → ESM, imports/exports, dynamic import, module boundaries, CommonJS concepts
+13 OOP → prototypes, classes, constructors, encapsulation, inheritance, polymorphism, abstraction, composition
+14 DOM → DOM tree, selection, manipulation, events, forms, validation, observers
+15 BOM → window, location, history, navigator, screen, browser environment
+16 Browser APIs → storage, URL, timers, clipboard, notifications, workers, structured clone
+17 Networking → HTTP, requests/responses, Fetch, REST, JSON, headers, CORS, auth concepts
+18 Error Handling → error taxonomy, throw, try/catch/finally, custom errors, debugging
+19 Memory & Performance → references, reachability, GC, rendering, profiling, Web Vitals
+20 DSA → complexity, arrays, strings, hashing, linked lists, stacks, queues, trees, graphs, algorithms
+21 Functional Programming → purity, immutability, composition, higher-order functions
+22 Testing → assertions, unit/integration tests, mocks, async tests, edge cases
+23 TypeScript → types, inference, narrowing, generics, interfaces, utility types, modules
+24 Design Patterns → creational, structural and behavioral patterns
+25 SOLID → SRP, OCP, LSP, ISP, DIP with JavaScript examples
+26 Architecture → boundaries, layering, dependency injection, validation, errors, testability
+27 Practice → recall, output prediction, debugging, implementation, refactoring, interview problems
+28 Projects → requirements, data models, UI/API flows, architecture, validation, testing, documentation
 
-## How to teach a chapter
+## Practice ladder
 
-**Before class:** read the definition and rules, run every example, and predict outputs.
+- **L1 Recall:** define the concept
+- **L2 Understand:** predict output and explain why
+- **L3 Apply:** implement from scratch
+- **L4 Debug:** fix broken code
+- **L5 Design:** choose and combine concepts
+- **L6 Teach:** explain without reading notes
 
-**During class:** explain the problem first, then syntax, then execution flow, then code. Ask the learner to predict the output before running it.
+## Teaching workflow
 
-**After class:** give 5 recall questions, 5 output questions, 5 coding problems, and one small real-world task.
+Before teaching: read the chapter, run examples, predict outputs, and write your own explanation.
 
-## Quality standard
-- Prefer accurate JavaScript terminology over simplified but misleading explanations.
+During teaching: start with the problem, build the mental model, demonstrate execution, compare alternatives, and make the learner predict before running code.
+
+After teaching: use recall questions, output questions, coding exercises, a debugging task, and a small project feature.
+
+## Quality rules
+
+- Use precise JavaScript terminology.
 - Keep runnable examples separate from intentionally broken examples.
-- Explain browser APIs as browser features, not as part of the ECMAScript language itself.
+- Never describe browser APIs or Node.js APIs as ECMAScript itself.
 - Explain classes through the prototype system.
-- Distinguish language features from host/runtime features such as Node.js and browser APIs.
+- Explain references without misleading “memory address” shortcuts.
+- Include edge cases where they change behavior.
+- Prefer examples that can be copied into Node.js or a browser console.
 
-## Progress
-Follow the numeric folders in order. Do not skip the execution-model chapters before advanced OOP and asynchronous JavaScript.
+## Goal
+
+This repository is intended to become a **teacher-ready JavaScript reference**, not a collection of shallow notes.
+
+**Learn once → understand deeply → practice → teach → build → debug → remember.**
